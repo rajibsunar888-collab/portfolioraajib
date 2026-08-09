@@ -56,10 +56,10 @@ function Home() {
               More About Me
             </Link>
             <Link
-              to="/projects"
+              to="/resume"
               className="rounded-full border border-border px-6 py-3 text-sm font-bold transition-colors hover:bg-secondary"
             >
-              View Projects
+              Download CV
             </Link>
           </div>
         </div>
