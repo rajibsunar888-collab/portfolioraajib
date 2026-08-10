@@ -40,7 +40,9 @@ function Home() {
           <h1 className="mt-4 text-5xl font-extrabold sm:text-6xl">
             <span className="text-gradient">Rajib Sunar</span>
           </h1>
-          <h2 className="mt-3 text-2xl font-bold sm:text-3xl">And I'm a Frontend Developer</h2>
+          <h2 className="mt-3 text-2xl font-bold sm:text-3xl">
+            And I'm a <span className="typewriter-text text-gradient">Python Developer</span>
+          </h2>
           <p className="mt-5 max-w-md text-muted-foreground">
             I'm a web developer and content creator with over a year of hands-on experience. My
             expertise is website design, frontend development and much more.
