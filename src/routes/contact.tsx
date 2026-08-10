@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Youtube, Linkedin } from "lucide-react";
 import { SiteLayout, PageHeader } from "@/components/SiteLayout";
 
 export const Route = createFileRoute("/contact")({
