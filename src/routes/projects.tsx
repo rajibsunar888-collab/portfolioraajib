@@ -19,26 +19,42 @@ export const Route = createFileRoute("/projects")({
 
 const projects = [
   {
-    title: "Calculator Project",
-    overview: "A functional calculator with basic arithmetic operations using HTML, CSS and JavaScript.",
-    features: ["Basic operations (+, −, ×, ÷)", "Clear & delete buttons", "Responsive layout for all devices"],
+    title: "School Management System",
+    overview: "A complete system to manage students, teachers, classes and attendance in one dashboard.",
+    features: ["Student & teacher records", "Attendance and exam results", "Fee tracking with reports"],
   },
   {
-    title: "Hotel Website Project",
-    overview: "Hotel website with room details, booking flow and contact information.",
-    features: ["Image galleries", "Booking form with validation", "Mobile-friendly navigation"],
+    title: "E-Commerce Website",
+    overview: "An online store with product catalog, cart and checkout flow.",
+    features: ["Product listing & search", "Cart and order summary", "Responsive product pages"],
   },
   {
-    title: "Portfolio for Pokhara HR Manager",
-    overview: "Professional HR portfolio showing bio, skills and projects.",
-    features: ["Clean design & resume download", "Projects & testimonials", "Responsive contact section"],
+    title: "Banking System",
+    overview: "A banking app simulating accounts, transfers and transaction history.",
+    features: ["Account creation & balance view", "Deposits, withdrawals, transfers", "Transaction statements"],
   },
   {
-    title: "School Admission Graphic Design",
-    overview: "A graphic-heavy page promoting school admissions.",
-    features: ["Admission banners & CTAs", "Colorful course cards", "Photo gallery of school events"],
+    title: "Life-Manager Software",
+    overview: "An all-in-one planner for tasks, habits, goals and daily routines.",
+    features: ["Task & habit tracking", "Goal planner with progress", "Daily/weekly overview"],
+  },
+  {
+    title: "Personal Expense Tracker",
+    overview: "Track income and spending with clear category-wise insights.",
+    features: ["Add income & expenses", "Category-wise charts", "Monthly budget alerts"],
+  },
+  {
+    title: "Stock Portfolio Tracker",
+    overview: "Monitor holdings, invested value and profit/loss in real time.",
+    features: ["Holdings with live prices", "Profit/loss calculation", "Portfolio allocation charts"],
+  },
+  {
+    title: "Geolocation Tracker",
+    overview: "Track and visualize live location data on an interactive map.",
+    features: ["Live location on map", "Route history playback", "Distance & speed stats"],
   },
 ];
+
 
 function Projects() {
   return (
