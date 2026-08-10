@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Facebook, Instagram, Youtube } from "lucide-react";
+import { Mail, Youtube, Linkedin } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import photo from "@/assets/rajib.png.asset.json";
 
@@ -22,6 +22,12 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
+const socials = [
+  { href: "mailto:rajibsunar888@gmail.com", label: "Email", Icon: Mail },
+  { href: "https://youtube.com/@Rajibsunar-fv8it", label: "YouTube", Icon: Youtube },
+  { href: "https://linkedin.com/in/rajib-s-4b482530b", label: "LinkedIn", Icon: Linkedin },
+];
+
 function Home() {
   return (
     <SiteLayout>
@@ -38,13 +44,17 @@ function Home() {
           </p>
 
           <div className="mt-6 flex gap-3">
-            {[Facebook, Instagram, Youtube].map((Icon, i) => (
-              <span
-                key={i}
+            {socials.map(({ href, label, Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                aria-label={label}
                 className="flex size-10 items-center justify-center rounded-full border border-primary text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
               >
                 <Icon className="size-4" />
-              </span>
+              </a>
             ))}
           </div>
 
