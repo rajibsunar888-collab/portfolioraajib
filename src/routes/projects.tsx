@@ -1,4 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
+import {
+  GraduationCap,
+  ShoppingCart,
+  Landmark,
+  CalendarCheck,
+  Wallet,
+  TrendingUp,
+  MapPin,
+} from "lucide-react";
 import { SiteLayout, PageHeader } from "@/components/SiteLayout";
 
 export const Route = createFileRoute("/projects")({
