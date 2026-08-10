@@ -63,7 +63,7 @@ const projects = [
     features: ["Live location on map", "Route history playback", "Distance & speed stats"],
   },
 ];
-
+const icons = [GraduationCap, ShoppingCart, Landmark, CalendarCheck, Wallet, TrendingUp, MapPin];
 
 function Projects() {
   return (
@@ -74,22 +74,37 @@ function Projects() {
         subtitle="A look at the websites and interfaces I've designed and built so far."
       />
       <section className="mx-auto grid max-w-6xl gap-5 px-5 md:grid-cols-2">
-        {projects.map((p, i) => (
-          <article key={p.title} className="surface-card p-7">
-            <span className="text-sm font-bold text-primary">0{i + 1}</span>
-            <h2 className="mt-2 text-xl font-bold">{p.title}</h2>
-            <p className="mt-2 text-sm text-muted-foreground">{p.overview}</p>
-            <ul className="mt-4 space-y-2 text-sm">
-              {p.features.map((f) => (
-                <li key={f} className="flex gap-2">
-                  <span className="text-primary">▹</span>
-                  <span className="text-muted-foreground">{f}</span>
-                </li>
-              ))}
-            </ul>
-          </article>
-        ))}
+        {projects.map((p, i) => {
+          const Icon = icons[i % icons.length];
+          return (
+            <article key={p.title} className="surface-card overflow-hidden">
+              <div className="relative flex h-28 items-center justify-center [background:var(--gradient-hero)]">
+                <div className="absolute inset-0 opacity-30 [background:var(--gradient-accent)]" />
+                <div className="absolute -right-6 -top-6 size-28 rounded-full bg-primary/20 blur-2xl" />
+                <div className="relative flex size-14 items-center justify-center rounded-2xl border border-primary/40 bg-background/60 text-primary shadow-[var(--shadow-glow)] backdrop-blur">
+                  <Icon className="size-7" />
+                </div>
+                <span className="absolute left-4 top-3 text-xs font-bold tracking-widest text-primary">
+                  0{i + 1}
+                </span>
+              </div>
+              <div className="p-7">
+                <h2 className="text-xl font-bold">{p.title}</h2>
+                <p className="mt-2 text-sm text-muted-foreground">{p.overview}</p>
+                <ul className="mt-4 space-y-2 text-sm">
+                  {p.features.map((f) => (
+                    <li key={f} className="flex gap-2">
+                      <span className="text-primary">▹</span>
+                      <span className="text-muted-foreground">{f}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          );
+        })}
       </section>
     </SiteLayout>
   );
 }
+
