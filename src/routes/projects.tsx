@@ -8,10 +8,10 @@ export const Route = createFileRoute("/projects")({
       {
         name: "description",
         content:
-          "Selected web projects by Rajib Sunar: a JavaScript calculator, hotel website, HR portfolio and school admission page.",
+          "Projects by Rajib Sunar: school management system, e-commerce website, banking system, life manager, expense tracker, stock portfolio and geolocation tracker.",
       },
       { property: "og:title", content: "Projects — Rajib Sunar" },
-      { property: "og:description", content: "Calculator, hotel website, HR portfolio and school admission projects." },
+      { property: "og:description", content: "School management, e-commerce, banking, life manager, expense, stock and geolocation projects." },
     ],
   }),
   component: Projects,
