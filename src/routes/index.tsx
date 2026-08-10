@@ -33,8 +33,11 @@ function Home() {
     <SiteLayout>
       <section className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 md:grid-cols-2 md:py-28">
         <div>
-          <p className="text-lg font-semibold text-muted-foreground">Hello, It's Me</p>
-          <h1 className="mt-2 text-5xl font-extrabold sm:text-6xl">
+          <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm font-semibold text-primary">
+            <span className="rounded bg-primary px-1.5 py-0.5 text-xs font-bold text-primary-foreground">FOCUS</span>
+            Frontend Development
+          </div>
+          <h1 className="mt-4 text-5xl font-extrabold sm:text-6xl">
             <span className="text-gradient">Rajib Sunar</span>
           </h1>
           <h2 className="mt-3 text-2xl font-bold sm:text-3xl">And I'm a Frontend Developer</h2>
