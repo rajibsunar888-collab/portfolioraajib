@@ -75,7 +75,7 @@ function Projects() {
       />
       <section className="mx-auto grid max-w-6xl gap-5 px-5 md:grid-cols-2">
         {projects.map((p, i) => {
-          const Icon = icons[i % icons.length];
+          const Icon = icons[i % icons.length]!;
           return (
             <article key={p.title} className="surface-card overflow-hidden">
               <div className="relative flex h-28 items-center justify-center [background:var(--gradient-hero)]">
